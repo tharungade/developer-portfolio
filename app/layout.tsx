@@ -16,7 +16,27 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <nav className="p-4 rounded-bl-2xl text-white" style={{"background-color": "var(--primariy-color)"}}>
+          <div>I am Devloper</div>
+          <div className="flex flex-row-reverse">
+            <a className="p-2" href="/blog">blog</a>
+            <a className="p-2" href="/projects">projects</a>
+            <a className="p-2" href="/">home</a>
+          </div>
+        </nav>
+        <div className="min-h-screen">
+          {children}
+        </div>
+        <footer className="p-8 text-center text-white" style={{"background-color": "var(--primariy-color)"}}>
+          <div>want to contact?</div>
+          <div>
+            <a href="https://www.linkedin.com/in/tharungade/" className="p-2">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/tharungade/" className="p-2">Twitter</a>
+            <a href="https://www.linkedin.com/in/tharungade/" className="p-2">GitHub</a>
+          </div>
+        </footer>
+        </body>
     </html>
   );
 }
